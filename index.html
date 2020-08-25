@@ -16,17 +16,26 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/offcanvas/offcanvas.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/4.0/examples/pricing/pricing.css" rel="stylesheet">
     <style>
-      img {
+      body {
+        padding-top: 0;
+      }
+      .logo {
         width: 100%;
         height: auto;
         max-width: 150px;
         max-height: 150px;
       }
+      .fullpage {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 30vh;
+        margin-bottom: 33vh;
+      }
     </style>
   </head>
   <body class="bg-dark text-white">
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <img src="https://i.imgur.com/AazeqA5.jpg" alt="SA.nef">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center fullpage">
+      <img src="https://i.imgur.com/AazeqA5.jpg" style="box-shadow: 2px 2px 10px #131313;" class="logo" alt="SA.nef">
       <br/>
       <br/>
       <p class="lead">
@@ -34,6 +43,9 @@
       </p>
     </div>
     <div class="container">
+      <h1 class="text-center">
+        Tabela de Preços
+      </h1>
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow bg-light text-dark">
           <div class="card-header">
@@ -103,7 +115,7 @@
         </div>
       </div>
       <div class="alert alert-secondary text-center" role="alert">
-        *O valor está sujeito a mudança de acordo com os interesses e necessidades do cliente.
+        * O valor está sujeito a mudança de acordo com os interesses e necessidades do cliente.
       </div>
     </div>
     <main role="main" class="container">
@@ -142,6 +154,21 @@
             <span class="d-block text-white">
               Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
             </span>
+          </p>
+        </div>
+      </div>
+      <div class="card mb-3 text-dark">
+        <img src="filipe.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            Me chamo 
+            <strong>
+              Filipe de Sá
+            </strong>
+            ,
+          </h5>
+          <p class="card-text text-justify">
+            sou estudante de Sistemas para Internet, comecei como freelancer aos meus 16 anos Fotografando. Atualmente tenho focado em desenvolver artes visuais para empresas, serviços com realidade aumentada para contas comerciais e pessoais além de estudar automação de serviços por conta própria nas horas vagas.
           </p>
         </div>
       </div>
