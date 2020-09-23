@@ -260,9 +260,9 @@
         function sharePage() {
             var x = document.getElementById("sharepage");
             if (x.style.display === "none") {
-                $("#sharepage").fadeIn();
+                x.style.display = "block";
             } else {
-                $("#sharepage").fadeOut();
+                x.style.display = "none";
             }
         }
         function typeWriter(elemento) {
