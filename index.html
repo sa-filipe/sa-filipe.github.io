@@ -53,7 +53,7 @@
         </style>
     </head>
     <body class="text-center" id="top">
-        <form class="form-signin animate-opacity" id="form1">
+        <form class="form-signin animate-opacity" id="page1">
             <img class="mb-4 animate-top" src="https://i.imgur.com/SRyEIsO.jpg" alt="logo" style="border-radius: 10px; box-shadow: 2px 2px 10px #131313;" width="100" height="100" />
             <h1 class="h3 mb-4 font-weight-normal">Olá! Tudo bem?</h1>
             <div class="card text-dark">
@@ -73,6 +73,21 @@
                 </div>
             </div>
             <hr class="m-4 bg-light" />
+            <div class="mt-4 animate-opacity" id="share" style="display: none;">
+                <h4 class="modal-title">Compartilhe</h4>
+                <div class="modal-body">
+                    <a href="http://www.facebook.com/sharer.php?u=https://bit.ly/sa-filipe&p[title]=Filipe+Sá" target="_blank"><i class="m-2 fab fa-facebook fa-3x"></i></a>
+                    <a href="https://telegram.me/share/url?url=Ei! olha só o trabalho do Filipe Sá. Acho que ele pode te ajudar em algo! https://bit.ly/sa-filipe" target="_blank">
+                        <i class="m-2 fab fa-telegram fa-3x"></i>
+                    </a>
+                    <a href="http://twitter.com/share?text=Filipe+Sá&url=https://bit.ly/sa-filipe" target="_blank"><i class="m-2 fab fa-twitter fa-3x"></i></a>
+                    <a href="whatsapp://send?text=Ei! olha só o trabalho do Filipe Sá. Acho que ele pode te ajudar em algo! https://bit.ly/sa-filipe" data-action="share/whatsapp/share" target="_blank" style="color: #28a745;">
+                        <i class="m-2 fab fa-whatsapp fa-3x"></i>
+                    </a>
+                    <input type="text" class="mt-2 form-control text-center" value="https://bit.ly/sa-filipe" id="mySite" readonly />
+                    <button type="button" class="mt-2 mb-3 btn btn-lg btn-primary btn-block" onclick="textCopy()"><i class="far fa-copy"></i> Copy link</button>
+                </div>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="m-2 col">
@@ -82,34 +97,11 @@
                         <a href="mailto:filipedesa97@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
                     </div>
                     <div class="m-2 col">
-                        <a href="#share" data-toggle="modal" data-target="#ModalCenter"><i class="fas fa-share-alt fa-2x"></i></a>
+                        <a href="#share" onclick="sharePage()"><i class="fas fa-share-alt fa-2x"></i></a>
                     </div>
-                    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-                     <div class="modal-dialog modal-dialog-centered" role="document">
-                         <div class="modal-content">
-                             <div class="modal-header" style="border-bottom: none; align-items: center;">
-                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                     <span aria-hidden="true">&times;</span>
-                                 </button>
-                             </div>
-                             <h4 class="modal-title">Compartilhe</h4>
-                             <div class="modal-body">
-                                 <a href="http://www.facebook.com/sharer.php?u=https://bit.ly/sa-filipe&p[title]=Filipe+Sá" target="_blank"><i class="m-2 fab fa-facebook fa-3x"></i></a>
-                                 <a href="https://telegram.me/share/url?url=Ei! olha só o trabalho do Filipe Sá. Acho que ele pode te ajudar em algo! https://bit.ly/sa-filipe" target="_blank">
-                                     <i class="m-2 fab fa-telegram fa-3x"></i>
-                                 </a>
-                                 <a href="http://twitter.com/share?text=Filipe+Sá&url=https://bit.ly/sa-filipe" target="_blank"><i class="m-2 fab fa-twitter fa-3x"></i></a>
-                                 <a href="whatsapp://send?text=Ei! olha só o trabalho do Filipe Sá. Acho que ele pode te ajudar em algo! https://bit.ly/sa-filipe" data-action="share/whatsapp/share" target="_blank" style="color: #28a745;">
-                                     <i class="m-2 fab fa-whatsapp fa-3x"></i>
-                                 </a>
-                                 <input type="text" class="mt-2 form-control text-center" value="https://bit.ly/sa-filipe" id="mySite" readonly />
-                                 <button type="button" class="mt-2 mb-3 btn btn-lg btn-primary btn-block" onclick="textCopy()"><i class="far fa-copy"></i> Copy link</button>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
                 </div>
             </div>
+
             <hr class="m-4 bg-light" />
             <a href="https://github.com/sa-filipe" target="_blank">
                 <button type="button" class="mt-2 mb-2 btn btn-lg btn-light btn-block"><i class="fa fa-github-alt"></i> GitHub</button>
@@ -125,7 +117,7 @@
             </a>
             <p class="mt-3 mb-3 text-muted">&copy; 2020</p>
         </form>
-        <form class="form-signin animate-opacity" id="form2" style="display: none;">
+        <form class="form-signin animate-opacity" id="page2" style="display: none;">
             <img class="mb-4 animate-top" src="https://i.imgur.com/SRyEIsO.jpg" alt="logo" style="border-radius: 10px; box-shadow: 2px 2px 10px #131313;" width="100" height="100" />
             <p class="lead">
                 Ouvindo sua necessidade, quero te ajudar a ter melhores resultados, trabalhando juntos podemos mostrar seu produto/marca com qualidade e por um preço acessível.
@@ -254,17 +246,25 @@
             alert("Link Copied!");
         }
         function switchPage() {
-            var x = document.getElementById("form1");
+            var x = document.getElementById("page1");
             if (x.style.display === "none") {
                 x.style.display = "block";
             } else {
                 x.style.display = "none";
             }
-            var x = document.getElementById("form2");
+            var x = document.getElementById("page2");
             if (x.style.display === "none") {
                 x.style.display = "block";
             } else {
                 x.style.display = "none";
+            }
+        }
+        function sharePage() {
+            var x = document.getElementById("share");
+            if (x.style.display === "none") {
+                $("#share").fadeIn();
+            } else {
+                $("#share").fadeOut();
             }
         }
         function typeWriter(elemento) {
@@ -274,17 +274,7 @@
                 setTimeout(() => (elemento.innerHTML += letra), 75 * i);
             });
         }
-
-        // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
-        // function typeWriter(elemento) {
-        //   const textoArray = elemento.innerHTML.split('');
-        //   elemento.innerHTML = '';
-        //   for(let i = 0; i < textoArray.length; i++) {
-        //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
-        //   }
-        // }
-
-        const titulo = document.querySelector("#form1 > h1");
-        typeWriter(titulo);
+        const texto = document.querySelector("#page1 > h1");
+        typeWriter(texto);
     </script>
 </html>
