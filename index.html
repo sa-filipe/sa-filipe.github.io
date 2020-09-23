@@ -73,7 +73,7 @@
                 </div>
             </div>
             <hr class="m-4 bg-light" />
-            <div class="mt-4 animate-opacity" id="share" style="display: none;">
+            <div class="mt-4 animate-opacity" id="sharepage" style="display: none;">
                 <h4 class="modal-title">Compartilhe</h4>
                 <div class="modal-body">
                     <a href="http://www.facebook.com/sharer.php?u=https://bit.ly/sa-filipe&p[title]=Filipe+Sá" target="_blank"><i class="m-2 fab fa-facebook fa-3x"></i></a>
@@ -97,11 +97,10 @@
                         <a href="mailto:filipedesa97@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
                     </div>
                     <div class="m-2 col">
-                        <a href="#share" onclick="sharePage()"><i class="fas fa-share-alt fa-2x"></i></a>
+                        <a href="#sharepage" onclick="sharePage()"><i class="fas fa-share-alt fa-2x"></i></a>
                     </div>
                 </div>
             </div>
-
             <hr class="m-4 bg-light" />
             <a href="https://github.com/sa-filipe" target="_blank">
                 <button type="button" class="mt-2 mb-2 btn btn-lg btn-light btn-block"><i class="fa fa-github-alt"></i> GitHub</button>
@@ -260,11 +259,11 @@
             }
         }
         function sharePage() {
-            var x = document.getElementById("share");
+            var x = document.getElementById("sharepage");
             if (x.style.display === "none") {
-                $("#share").fadeIn();
+                x.style.display = "block";
             } else {
-                $("#share").fadeOut();
+                x.style.display = "none";
             }
         }
         function typeWriter(elemento) {
