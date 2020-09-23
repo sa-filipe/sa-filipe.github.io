@@ -7,7 +7,6 @@
         <meta name="description" content="Meu cartão de visita além de ser meu catálogo de serviços como freelancer." />
         <meta name="author" content="Filipe Sá" />
         <title>Filipe Sá</title>
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/" />
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
         <!-- Favicons -->
@@ -261,9 +260,9 @@
         function sharePage() {
             var x = document.getElementById("sharepage");
             if (x.style.display === "none") {
-                x.style.display = "block";
+                $("#sharepage").fadeIn();
             } else {
-                x.style.display = "none";
+                $("#sharepage").fadeOut();
             }
         }
         function typeWriter(elemento) {
